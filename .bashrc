@@ -293,14 +293,14 @@ git-push() {
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/peaceofsense/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/suuper/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/peaceofsense/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/peaceofsense/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/suuper/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/suuper/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/peaceofsense/anaconda3/bin:$PATH"
+        export PATH="/home/suuper/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -327,6 +327,3 @@ nixos_rebuild() {
 
 # Optionally, you can add an alias for quick access
 alias rebuild='nixos_rebuild'
-alias xfreerdp-evt='xfreerdp /v:10.188.251.74 /cert:ignore /u:ratheesan +clipboard /dynamic-resolution'
-alias py='python3'
-alias ddcutil-bash='sudo ddcutil --display 1 setvcp 10'
