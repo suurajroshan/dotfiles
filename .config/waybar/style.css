@@ -1,0 +1,163 @@
+@import "mocha.css";
+
+* {
+  font-family: JetBrainsMono NFP;
+  font-size: 14px;
+  min-height: 0;
+}
+
+#waybar {
+  background: #1e1e1e;
+  color: @text;
+  margin: 5px 5px;
+}
+
+#workspaces {
+  border-radius: 1rem;
+  margin: 5px;
+  background-color: @surface0;
+  margin-left: 1rem;
+}
+
+#workspaces button {
+  color: @lavender;
+  border-radius: 1rem;
+  padding: 0.4rem;
+}
+
+#workspaces button.active {
+  color: @sky;
+  border-radius: 1rem;
+}
+
+#workspaces button:hover {
+  color: @sapphire;
+  border-radius: 1rem;
+}
+
+/* Styles for modules in "modules-left" */
+#hyprland-workspaces {
+  border-radius: 1rem;
+  margin: 5px;
+  background-color: @surface0;
+}
+
+#hyprland-workspaces button {
+  color: @lavender;
+  border-radius: 1rem;
+  padding: 0.4rem;
+}
+
+#hyprland-workspaces button.active {
+  color: @sky;
+  border-radius: 1rem;
+}
+
+#hyprland-workspaces button:hover {
+  color: @sapphire;
+  border-radius: 1rem;
+}
+
+#hyprland-window {
+  color: @text;
+  border-radius: 1rem;
+  margin-left: 2rem;
+  
+}
+
+/* Styles for modules in "modules-right" */
+#network {
+  color: @blue;
+  border-radius: 1rem;
+  margin: 5px;
+}
+
+#bluetooth {
+  color: @cyan;
+  border-radius: 1rem;
+  margin: 5px;
+}
+
+#cpu {
+  color: @orange;
+  border-radius: 1rem;
+  margin-left: 0.75rem;
+  margin-right: 5px;
+}
+
+#memory {
+  color: @purple;
+  border-radius: 1rem;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#hyprland-language {
+  color: @text;
+  border-radius: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+#battery {
+  color: @green;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+#battery.charging {
+  color: @green;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+#battery.warning:not(.charging) {
+  color: @red;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+#backlight {
+  color: @yellow;
+  border-radius: 0;
+  margin-left: 1rem;
+}
+
+#pulseaudio {
+  color: @maroon;
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 0.5rem;
+  
+}
+
+
+#clock {
+  color: @sapphire;
+  border-radius: 0px 1rem 1rem 0px;
+  
+  margin-left: 1rem;
+}
+
+/* General styles for additional modules */
+#custom-music {
+  color: @mauve;
+  border-radius: 1rem;
+}
+
+#custom-lock {
+  border-radius: 1rem 0px 0px 1rem;
+  color: @lavender;
+}
+
+#custom-power {
+  margin-right: 1rem;
+  border-radius: 0px 1rem 1rem 0px;
+  color: @red;
+}
+
+#tray {
+  margin-right: 1rem;
+  border-radius: 1rem;
+}
+
+
