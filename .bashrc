@@ -104,6 +104,8 @@ alias ungz='tar -xvzf'
 # Show all logs in /var/log
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
 
+# wifi access point
+alias hotspoton='sudo create_ap wlp0s20f3 wwp0s20f0u7 nixos paisalagega'
 
 #######################################################
 # SPECIAL FUNCTIONS
