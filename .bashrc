@@ -105,7 +105,7 @@ alias ungz='tar -xvzf'
 alias logs="sudo find /var/log -type f -exec file {} \; | grep 'text' | cut -d' ' -f1 | sed -e's/:$//g' | grep -v '[0-9]$' | xargs tail -f"
 
 # wifi access point
-alias hotspoton='sudo create_ap wlp0s20f3 wwp0s20f0u7 nixos paisalagega'
+alias hotspoton='sudo create_ap wlp0s20f3 wwp0s20f0u7 nixos yeeehawww'
 
 #######################################################
 # SPECIAL FUNCTIONS
@@ -251,10 +251,7 @@ eval "$(starship init bash)"
 # Original aliases
 #######################################################
 alias connect-fau='sudo openconnect --authgroup=FAU-Fulltunnel vpn.fau.de'
-alias nmcli-connect='sudo nmcli device wifi connect'
-alias nmcli-pixel='nmcli device wifi connect "Google Pixel"'
 alias jnb='jupyter-notebook'
-
 
 git-push() {
     # Prompt for commit message
@@ -329,3 +326,15 @@ nixos_rebuild() {
 
 # Optionally, you can add an alias for quick access
 alias rebuild='nixos_rebuild'
+
+# ssh-add 
+#eval "$(ssh-agent -s)"
+#ssh-add 
+
+# ssh agent
+if [ -z "$SSH_AUTH_SOCK" ]; then
+    if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+        eval "$(ssh-agent -s)" > ~/.ssh/ssh-agent
+    fi
+    eval "$(cat ~/.ssh/ssh-agent)"
+fi
